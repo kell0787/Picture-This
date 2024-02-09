@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -15,7 +15,38 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <section>
+      <picture>
+
+        <!-- landscape images -->
+
+        <source srcset="images/landscape320x180.jpg,
+          images/landcape640x360.jpg 2x,
+          images/landscape960x540.jpg 3x" media="(min-width: 320px) and (max-width: 479px)">
+        <source srcset="images/landscape480x270.jpg,
+          images/landscape960x540.jpg 2x,
+          images/landscape1440x810.jpg 3x" media="(min-width: 480px) and (max-width: 719px)">
+        <source srcset="images/landscape720x405.jpg,
+          images/landscape1440x810.jpg 2x,
+          images/landscape2160x1215.jpg 3x" media="(min-width: 720px) and (max-width: 959px)">
+        <source srcset="images/landscape960x540.jpg,
+          images/landscape1920x1080.jpg 2x,
+          images/landscape2880x1621.jpg 3x" media="(min-width: 960px)">
+
+        <!-- square images  -->
+        <source srcset="images/square480.jpg,
+        images/square960.jpg 2x,
+        images/square1440.jpg 3x" media="(min-width: 480px) and (max-width:639px)">
+        <source srcset="images/square640.jpg,
+          images/square1280.jpg 2x,
+          images/square1920.jpg 3x" media="(min-width: 640px) and (max-width:799px)">
+        <source srcset="images/square800.jpg,
+        images/square1600.jpg 2x,
+        images/square2400.jpg 3x" media="(min-width: 800px)">
+        <img class="square" src="images/museum.jpg" alt="Museum image">
+      </picture>
+    </section>
+
 
   </header>
 </body>
